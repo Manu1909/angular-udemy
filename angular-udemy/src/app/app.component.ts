@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from './service-module/services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-udemy';
+ 
+
+  constructor(public userService: UserService) {}
+
+  onSetToInactive(id: number) {
+    this.userService.onSetToInactive(id);
+  }
+
+  onSetToActive(id: number) {
+    this.userService.onSetToActive(id);
+  }
 }

@@ -1,16 +1,21 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { ActiveUsersComponent } from '../app/service-module/active-users/active-users.component';
+import { InactiveUsersComponent } from '../app/service-module/inactive-users/inactive-users.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
